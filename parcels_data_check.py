@@ -11,7 +11,7 @@
 #-------------------------------------------------------------------------------
 
 
-import sys,string,os,arcpy,time,datetime,shutil,copy
+import os,arcpy,time,datetime,copy
 from datetime import date, timedelta
 
 from arcpy import env
