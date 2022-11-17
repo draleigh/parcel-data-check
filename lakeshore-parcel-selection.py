@@ -5,7 +5,7 @@
 #                   selected lakes to select parcels from the state parcel layer, and
 #                   then produces a feature class with the selected parcels.
 #
-# Author:      Daniel Raleigh
+# Author:      draleig
 #
 # Created:     11 November 2022
 # Copyright:   (c) daraleig 2022

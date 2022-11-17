@@ -4,7 +4,7 @@
 #                   to determine whether extra effort is required to find 
 #                   full parcel datasets from specific counties (including 
 #                   checking on null entries and presence of road type descriptors).
-# Author:      Daniel Raleigh
+# Author:      draleig
 #
 # Created:     25 October 2022
 # Copyright:   (c) daraleig 2022
