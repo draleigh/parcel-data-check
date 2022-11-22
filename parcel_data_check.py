@@ -3,7 +3,7 @@
 # Purpose:      For checking on the status of parcels within specific counties
 #                   to determine whether extra effort is required to find 
 #                   full parcel datasets from specific counties. 
-# Author:      draleig
+# Author:      draleigh
 #
 # Created:     21 October 2022
 # Copyright:   (c) draleig 2022
