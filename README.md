@@ -5,7 +5,7 @@ This repository contains (or will contain) a collection of scripts that I've uti
 
 
 
-"parcels_data_check.py"                 (Packages Required: os, arcpy, time, datetime, copy)
+"parcel_data_check.py"                 (Packages Required: os, arcpy, time, datetime, copy)
 
 Issue: 
 I was tasked with an annual review of parcels within specific counties to ensure that appropriate data existed to contact landowners for ongoing wildlife management. The parcel dataset incorporates close to 100 county parcel datasets on a quarterly basis and the data acquired can vary in quality and completion from year to year. Sometimes, a county may be completely empty. At other times, a county may have strictly property owner information but no address data. Still other occasions find that the names and street addresses are there, but there is no information on city/state/zip data. Sometimes, the physical address information is complete but the tax information is missing, and vice versa.
