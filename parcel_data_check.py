@@ -59,7 +59,7 @@ print('\nConducting a full check on all fields for the flagged counties\n')     
 with arcpy.da.SearchCursor('Counties', ['CTY_NAME']) as cursor:                                             # set up a new SearchCursor to iterate over the features in the layer 'Counties' according to the field 'CTY_NAME'
 # Final_Checkup was changed to Selected_Counties
     for check in Selected_Counties:                                                                         # set up a FOR loop to iterate over the entries within the list Selected_Counties
-        testing_list = [0, 0, 0]                                                                            # set up a new list with [0, 0, 0] as a baselin
+        testing_list = [0, 0, 0]                                                                            # set up a new list with [0, 0, 0] as a baseline
         Expression = "CTY_NAME = '{}'".format(check)                                                        # set up a new Expression to include the county in question for this iteration
         arcpy.SelectLayerByAttribute_management('Counties', "NEW_SELECTION", Expression)                    # select the county polygon in question from the 'Counties' layer
         arcpy.SelectLayerByLocation_management('Parcels', "INTERSECT", 'Counties', 0, "NEW_SELECTION")      # select all 'Parcels' polygons that intersect with the 'Counties' polygon
