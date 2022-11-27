@@ -68,3 +68,11 @@ When the script finishes its run, a series of text blocks indicate which countie
 
 
 #_______________________________________________________________________________________________________________________________________
+
+"lakeshore_parcel_selection.py"                 (WIP, pending name change)
+
+Issue: 
+
+
+
+Solution: 
