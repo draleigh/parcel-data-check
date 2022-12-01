@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------
 # Name:        Find Lakeshore Parcels
-# Purpose:      This script iterates over an input csv to find Lake ID numbers,
+# Purpose:      This script iterates over an input XLSX file to find Lake ID numbers,
 #                   selects those lakes from the state lake layer, uses those
 #                   selected lakes to select parcels from the state parcel layer, and
 #                   then produces a feature class with the selected parcels.
@@ -16,7 +16,7 @@
 
 
 
-import os,arcpy,time,datetime,copy,csv,openpyxl                                             # list of modules that will be needed
+import os,arcpy,time,datetime,copy,openpyxl                                                 # list of modules that will be needed
 from datetime import date, timedelta                                                        # extract the sub modules
 from openpyxl import load_workbook                                                          # extract the sub module
 from arcpy import env                                                                       # extract the sub module
