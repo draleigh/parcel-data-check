@@ -8,7 +8,7 @@
 # Author:      draleigh
 #
 # Created:     11 November 2022
-# Copyright:   (c) daraleig 2022
+# Copyright:   (c) draleigh 2022
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 #
