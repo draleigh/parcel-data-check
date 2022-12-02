@@ -20,8 +20,8 @@ import os,arcpy,time,datetime,copy,openpyxl                                     
 from datetime import date, timedelta                                                        # extract the sub modules
 from openpyxl import load_workbook                                                          # extract the sub module
 from arcpy import env                                                                       # extract the sub module
-from arcpy.sa import *                                                                      # call the Spatial Analyst tool with arcpy
-arcpy.CheckOutExtension("Spatial")                                                          # retrieves the ArcGIS Spatial Analyst extension
+from arcpy.sa import *                                                                      # import the Spatial Analyst toolbar
+arcpy.CheckOutExtension("Spatial")                                                          # check out the Spatial Analyst toolbar
 
 # Date Management
 start_time = time.time()                                                                    # define the start time of the script
