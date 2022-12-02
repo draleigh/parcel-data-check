@@ -65,14 +65,3 @@ Additional calculations are run to determine the percentage of each field that c
 4)
 When the script finishes its run, a series of text blocks indicate which counties will need to be checked on, and the varying degree of the severity that flagged a request for a checkup. 
 
-
-
-#_______________________________________________________________________________________________________________________________________
-
-"lakeshore_parcel_selection.py"                 (WIP, pending name change)
-
-Issue: 
-
-
-
-Solution: 
