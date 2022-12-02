@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Name:        Find Lakeshore Parcels
+# Name:        lakeshore_parcel_selection.py
 # Purpose:      This script iterates over an input XLSX file to find Lake ID numbers,
 #                   selects those lakes from the state lake layer, uses those
 #                   selected lakes to select parcels from the state parcel layer, and
