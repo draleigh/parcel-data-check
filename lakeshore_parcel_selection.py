@@ -37,31 +37,31 @@ today_full_str = today_year_str + today_month_str + today_day_str               
 #print(today_full_str)                                                                      # print out today_full_str in the terminal
 
 # Set up the month word
-if today_month == 1:
-    today_month_word = 'January'
-elif today_month == 2:
-    today_month_word = 'Febuary'
-elif today_month == 3:
-    today_month_word = 'March'
-elif today_month == 4:
-    today_month_word = 'April'
-elif today_month == 5:
-    today_month_word = 'May'
-elif today_month == 6:
-    today_month_word = 'June'
-elif today_month == 7:
-    today_month_word = 'July'
-elif today_month == 8:
-    today_month_word = 'August'
-elif today_month == 9:
-    today_month_word = 'September'
-elif today_month == 10:
-    today_month_word = 'October'
-elif today_month == 11:
-    today_month_word = 'November'
-elif today_month == 12:
-    today_month_word = 'December'
-#product_date = str('As of: '+today_month_str+'/'+today_day_str+'/'+today_year_str)
+if today_month == 1:                                                                        # set up an IF statement to relate back to 'today_month' for the value of 1
+    today_month_word = 'January'                                                            # if the statement evaluates to TRUE, return 'January'
+elif today_month == 2:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 2
+    today_month_word = 'Febuary'                                                            # if the statement evaluates to TRUE, return 'February'
+elif today_month == 3:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 3
+    today_month_word = 'March'                                                              # if the statement evaluates to TRUE, return 'March'
+elif today_month == 4:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 4
+    today_month_word = 'April'                                                              # if the statement evaluates to TRUE, return 'April'
+elif today_month == 5:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 5
+    today_month_word = 'May'                                                                # if the statement evaluates to TRUE, return 'May'
+elif today_month == 6:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 6
+    today_month_word = 'June'                                                               # if the statement evaluates to TRUE, return 'June'
+elif today_month == 7:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 7
+    today_month_word = 'July'                                                               # if the statement evaluates to TRUE, return 'July'
+elif today_month == 8:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 8
+    today_month_word = 'August'                                                             # if the statement evaluates to TRUE, return 'August'
+elif today_month == 9:                                                                      # set up an IF statement to relate back to 'today_month' for the value of 9
+    today_month_word = 'September'                                                          # if the statement evaluates to TRUE, return 'September'
+elif today_month == 10:                                                                     # set up an IF statement to relate back to 'today_month' for the value of 10
+    today_month_word = 'October'                                                            # if the statement evaluates to TRUE, return 'October'
+elif today_month == 11:                                                                     # set up an IF statement to relate back to 'today_month' for the value of 11
+    today_month_word = 'November'                                                           # if the statement evaluates to TRUE, return 'November'
+elif today_month == 12:                                                                     # set up an IF statement to relate back to 'today_month' for the value of 12
+    today_month_word = 'December'                                                           # if the statement evaluates to TRUE, return 'December'
+#product_date = str('As of: '+today_month_str+'/'+today_day_str+'/'+today_year_str)             # for detail, set up a string that will read out the date of the script's run (US-style) (e.g. for January 5, 2022: "As of: 01/05/2022")
 product_date = str('As of: '+today_month_word+" "+str(today_day)+", "+today_year_str)           # for finer detail, set up a string that will read out the date of the script's run with the name of the month (e.g. for January 5, 2002: "As of: January 5, 2002")
 
 # Define Data Locations and Other Variables
