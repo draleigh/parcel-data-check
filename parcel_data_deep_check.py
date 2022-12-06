@@ -14,12 +14,12 @@
 
 
 
-# Import packages
-import string,os,arcpy,time,datetime,copy
-from datetime import date, timedelta
-from arcpy import env
-from arcpy.sa import *
-arcpy.CheckOutExtension("Spatial")
+# Import packages and modules
+import os,arcpy,time,datetime,copy                          # list of packages that will be needed
+from datetime import date, timedelta                        # extract the modules
+from arcpy import env                                       # extract the module
+from arcpy.sa import *                                      # load all modules in the arcpy.sa path
+arcpy.CheckOutExtension("Spatial")                          # retrieve the Spatial Analyst extension license
 
 # Define Data Locations and Other Variables
 Parcels = *path to parcel shapefile*
@@ -417,7 +417,7 @@ with arcpy.da.SearchCursor('Counties', ['CTY_NAME']) as cursor:                 
             print('        {} County is cleared.'.format(check))
 #        if (testing_list[0] == 1 and testing_list[1] == 0) or (testing_list[0] == 0 and testing_list[1] == 1)
 #       new
-        print('        This county took %s seconds to process.' % (time.time() - block_start))  # print an expression that indicates how long it took the county in question to process
+        print('        This county took %s seconds to process.' % round(time.time() - block_start))  # print an expression that indicates how long it took the county in question to process
         print('        {} counties to go.'.format(len(Selected_Counties_To_Go)))                # print a len() of the number of counties still to go (recall that the current county's name was removed from this list)
         print('')
 
@@ -491,5 +491,5 @@ for county in Ultimate_Checkup_Counties:                                        
 
 
 # Display time taken just for fun:
-print('This script took %s seconds...' % (time.time() - start_time))
+print('This script took %s seconds...' % round(time.time() - start_time))
 # originally at 462 lines at the start of 27 November 2022

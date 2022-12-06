@@ -10,13 +10,12 @@
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 
-
-import os,arcpy,time,datetime,copy
-from datetime import date, timedelta
-
-from arcpy import env
-from arcpy.sa import *
-arcpy.CheckOutExtension("Spatial")
+# Import packages and modules
+import os,arcpy,time,datetime,copy                          # list of packages that will be needed
+from datetime import date, timedelta                        # extract the modules
+from arcpy import env                                       # extract the module
+from arcpy.sa import *                                      # load all modules in the arcpy.sa path
+arcpy.CheckOutExtension("Spatial")                          # retrieve the Spatial Analyst extension license
 
 # Define Data Locations and Other Variables
 Parcels = *path to parcel shapefile*                        # define the folder path to the parcel feature class
@@ -38,6 +37,7 @@ with arcpy.da.SearchCursor('Counties', ['CTY_NAME']) as cursor:                 
     for row in cursor:                                                                              # set up a FOR loop to investigate each row within the cursor
         print('{} County'.format(row[0]))                                                           # print the county name for each entry found per row (which will be the first entry in the 'CTY_NAME' field)
         Selected_Counties = Selected_Counties + ['{}'.format(row[0])]                               # append each row's county name to the Selected Counties list; this list will be unsorted
+Selected_Counties.sort()                                                                            # sort the counties in the list to keep things organized alphabetically
 arcpy.SelectLayerByAttribute_management('Counties', "CLEAR_SELECTION")                              # clear the selection of the 'Counties' layer
 Selected_Counties_To_Go = copy.copy(Selected_Counties)                                              # make a copy of the Selected_Counties list to be Selected_Counties_To_Go
 Selected_Add_Counties_To_Go = copy.copy(Selected_Counties)                                          # make a further copy of the Selected_Counties_To_Go
@@ -59,6 +59,7 @@ print('\nConducting a full check on all fields for the flagged counties\n')     
 with arcpy.da.SearchCursor('Counties', ['CTY_NAME']) as cursor:                                             # set up a new SearchCursor to iterate over the features in the layer 'Counties' according to the field 'CTY_NAME'
 # Final_Checkup was changed to Selected_Counties
     for check in Selected_Counties:                                                                         # set up a FOR loop to iterate over the entries within the list Selected_Counties
+        block_start = time.time()                                                                           # set the start time of the code block
         testing_list = [0, 0, 0]                                                                            # set up a new list with [0, 0, 0] as a baseline
         Expression = "CTY_NAME = '{}'".format(check)                                                        # set up a new Expression to include the county in question for this iteration
         arcpy.SelectLayerByAttribute_management('Counties', "NEW_SELECTION", Expression)                    # select the county polygon in question from the 'Counties' layer
@@ -261,6 +262,7 @@ with arcpy.da.SearchCursor('Counties', ['CTY_NAME']) as cursor:                 
         #       not a considerable number of empty rows. In this case, it is highly likely that sufficient data are available for future utilization:
         elif testing_list[0] == 0 and testing_list[1] == 0 and testing_list[2] == 0:
             print('        {} County is cleared.'.format(check))
+        print('        This county took %s seconds to process.' % round(time.time() - block_start))  # print an expression that indicates how long it took the county in question to process
         print('        {} counties to go.'.format(len(Selected_Counties_To_Go)))                # print a len() of the number of counties still to go (recall that the current county's name was removed from this list)
         print('')
 
@@ -332,5 +334,5 @@ for county in Ultimate_Checkup_Counties:                                        
 
 
 # Display time taken just for fun:
-print('This script took %s seconds...' % (time.time() - start_time))                                   # print a text message for the difference between the time that the script hits this point and the state_time variable that was defined at the time that the script began running
+print('This script took %s seconds...' % round(time.time() - start_time))                                   # print a text message for the difference between the time that the script hits this point and the state_time variable that was defined at the time that the script began running
 
